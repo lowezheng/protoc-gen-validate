@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package com.apexsoft.live;
+
+option java_multiple_files = true;
+
+option go_package="com/apexsoft/live";
+
+service PingService {
+
+  rpc ping (ReqPing) returns (RespPong) {
+
+  }
+  rpc pingCStream (stream ReqPing) returns (RespPong) {
+
+  }
+  rpc pingSStream (ReqPing) returns (stream RespPong) {
+
+  }
+  rpc pingStream (stream ReqPing) returns (stream RespPong) {
+
+  }
+}
+
+message ReqPing{
+
+  string ping = 1 ;
+  int64  reqTime = 2 ;
+}
+
+message RespPong{
+  string pong = 1 ;
+  int64 respTime = 2 ;
+}
+

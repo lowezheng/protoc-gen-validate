@@ -43,3 +43,5 @@ __pycache__/
 .settings
 .idea/
 .ijwb/
+validate/validate.pb.go.generated
+validate/validate.pb.go.original
